@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+    <style>
+      * {
+        /*border: 1px solid black;*/
+        color: white;
+        font-family: 'Gotham-Medium';
+        /* change */
+        box-sizing: border-box;
+      }
+      
+      @font-face {
+        font-family: 'Gotham-Medium';
+        src: url('./assets/GothamSSm-Light_Web.woff2');
+      }
+
+      body{
+        margin: 0;
+      }
+      header {
+        position: fixed;
+        width: 100%;
+      }
+      header svg {
+        width: 120px;
+        height: 30px;
+      }
+      header .logo{
+        float: left;
+      }
+
+      header .nav-items{
+        margin-left: 245px;
+        max-width: 455px;
+        display: inline-block;
+      }
+
+      header li{
+        display: inline-block;
+      }
+      
+      header .nav-items_end{
+        float: right;
+        margin-right: 15px;
+      }
+
+      ol, ul {
+        list-style: none;
+      }
+      a{
+        text-decoration: none;
+      }
+      li a{
+        padding: 10px;
+        font-size: 13px;
+        font-weight: bold;
+      }
+
+      li a:hover{
+        background-color: lightgray;
+        border-radius: 30px;
+      }
+      
+      .content{
+        height: 100vh;
+      }
+      .navigation-wrapper{
+        padding: 0;
+        height: 400px;
+        position: fixed;
+        top: 25%;
+      }
+
+      li.side_nav__item:hover {
+        overflow: visible;
+        width: 3px;
+        background-color: white;
+      }
+      li.side_nav__item span{
+        width: 150px;
+        display: block;
+      }
+      li.side_nav__item {
+        overflow: hidden;
+        width: 1px;
+        margin: 5px;
+        height: 25px;
+        background: rgba(255, 255, 255, 0.479);
+      }
+
+      span.tcl-showcase-navigation__label {
+        margin-left: 10px;
+        width: 100px;
+        font-weight: bolder;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      footer{
+        height: 25vh;
+      }
+      footer .item-wrapper{
+        width: 645px;
+        height: 60px;
+        display: block;
+        margin: 0px auto;
+        position: relative;
+      }
+      footer .item {
+        display: inline-block;
+        text-align: center;
+      }
+      footer .item a{
+        border: 3px solid white;
+        border-radius: 30px;
+        padding: 10px 30px
+      }
+      footer .item .top{
+        height: 30px;
+        width: 160px;
+        font-size: 29px;
+        margin-bottom: 10px;
+      } 
+      
+      footer .item .bottom{
+        font-size: 12px;
+      }
+
+      .content>.top {
+        width: 100%;
+        padding: 12vh 0 56vh;
+        text-align: center;
+        box-sizing: border-box;
+        font-weight: bold;
+      }
+
+      .tcl-image{
+        background-image: url('./images/model-3-hero-desktop.jpeg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .tesla-icon{
+        fill: white;
+        padding: 10px 40px;
+      }
+
+      .content .top h1{
+        font-size: 40px;
+      }
+      .scroll-down{
+        text-align: center;
+        font-size: 40px;
+      }
+      #content-1{
+        /* background-image: url('./images/model_3_safety_hero.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; */
+        color: #393c41;
+      }
+
+      
+      .banner-image{
+        width: 78.4%;
+        height: 100%;
+        border: 1px solid black;
+        /* background-color: salmon;
+        border: 1px solid black;
+        margin-left: 30%;
+        margin-bottom: 40%; */
+        /* margin-top: 12%; */
+        float: right;
+        /* clear: both; */
+
+      }
+      .page2-img{
+        width: 93%;
+        height: 100%;
+        /* border: 1px solid black; */
+        margin-right: 12.6%;
+        
+
+      }
+      .page-2-side{
+        width: 21.3%;
+        height: 100%;
+        border: 1px solid black;
+        color: black;
+        /* background-color: salmon;
+        border: 1px solid black;
+        margin-left: 30%;
+        margin-bottom: 40%; */
+        float: left;
+      }
+      .clr{
+        clear: both;
+      }
+      
+      button.circle:hover{
+        background-color: #393c41;
+        color: white;
+      }
+      button.circle{
+        background: none;
+        border: 2px solid #393c41;
+        border-radius: 30px;
+        color: #393c41;
+        width: 46px;
+        height: 46px;
+        font-size: 25px;
+      }
+      .btn{
+        border: solid 3px #393c41 ;
+        width: 137px;
+        height: 45px;
+        border-radius: 45px;
+        color: #393c41;
+        background-color: white;
+      }
+      .btn span{
+        border:white 1px solid;
+      }
+      .btn:hover{
+        background-color: #393c41;
+        color: white;
+
+      }
+      .bunner-image-p3{
+        width: 100%;
+        height: 80%;
+        border: 1px solid black;
+        background-image: url('./images/lhd-range-hero-desktop.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .p3-down{
+        width: 100%;
+        height: 20%;
+        border: 1px solid black;
+
+      }
+      
+     
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <div>
+          <svg class="tesla-icon" viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zM308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7z">
+            </path>
+          </svg>
+        </div>
+      </div>
+      <ol class="nav-items">
+        <li>
+          <a href="#">
+            <span>Model S</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Model 3</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Model X</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Model Y</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Charging</span>
+          </a>
+        </li>
+      </ol>
+      <ol class="nav-items_end">
+        <li>
+          <a href="#">
+            <span>Support</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Account</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Menu</span>
+          </a>
+        </li>
+      </ol>
+    </header>
+    <ul class="navigation-wrapper">
+      <li class="side_nav__item">
+        <span class="tcl-showcase-navigation__indicator"></span>
+        <span class="tcl-showcase-navigation__label" >Model 3</span>
+      </li>
+      <li class="side_nav__item">
+        <span class="tcl-showcase-navigation__indicator"></span>
+        <span class="tcl-showcase-navigation__label" >Safety</span>
+      </li>
+      <li class="side_nav__item">
+        <span class="tcl-showcase-navigation__indicator"></span>
+        <span class="tcl-showcase-navigation__label">Performance</span>
+      </li>
+      <li class="side_nav__item">
+        <span class="tcl-showcase-navigation__indicator"></span>
+        <span class="tcl-showcase-navigation__label">All-Wheel Drive</span>
+      </li>
+      <li class="side_nav__item">
+        <span class="tcl-showcase-navigation__indicator"></span>
+        <span class="tcl-showcase-navigation__label">Range</span>
+      </li>
+      <li class="side_nav__item" >
+        <span class="tcl-showcase-navigation__indicator"></span>
+        <span class="tcl-showcase-navigation__label">Autopilot</span>
+      </li>
+      <li class="side_nav__item">
+        <span class="tcl-showcase-navigation__indicator"></span>
+        <span class="tcl-showcase-navigation__label">Interior</span>
+      </li>
+      <li class="side_nav__item">
+        <span class="tcl-showcase-navigation__indicator"></span>
+        <span class="tcl-showcase-navigation__label">Specs</span>
+      </li>
+      <li class="side_nav__item side_nav__item--selected">
+        <span class="tcl-showcase-navigation__indicator"></span>
+        <span class="tcl-showcase-navigation__label">Order</span>
+      </li>
+    </ul>
+    <div class="content tcl-image">
+      <div class="top">
+        <h1>Model 3</h1>
+      </div>
+      <footer>
+        <div class="item-wrapper">
+          <div class="item">
+            <div class="top">
+              <svg xmlns="http://www.w3.org/2000/svg" style="width: 49px;margin: -5px -10px;" viewBox="0 0 40 21" fill="white">
+                <path d="M 35.471 16.155 C 35.473 12.234 34.016 8.454 31.384 5.547 L 30.819 4.918 C 24.619 -1.314 14.524 -1.356 8.273 4.826 C 5.239 7.825 3.539 11.917 3.558 16.183 L 3.558 17.122 L 6.674 17.122 L 6.674 16.183 L 5.45 16.183 C 5.452 12.736 6.729 9.412 9.038 6.852 L 9.981 7.706 L 10.601 7.002 L 9.659 6.166 C 12.182 3.695 15.546 2.267 19.077 2.168 L 19.077 3.96 L 20.019 3.96 L 20.019 2.13 C 23.553 2.239 26.916 3.677 29.434 6.157 L 28.493 6.955 L 29.115 7.659 L 30.056 6.842 C 32.347 9.398 33.614 12.706 33.616 16.136 L 32.354 16.136 L 32.354 17.074 L 35.471 17.074 Z" style=""/>
+                <path d="M 31.014 17.004 L 7.991 17.004 C 7.991 10.859 13.146 5.875 19.503 5.875 C 25.86 5.875 31.014 10.859 31.014 17.004 Z" style="fill-opacity: 0.5;"/>
+                <path style="stroke-width: 0.438269;" d="M 26.821 21.411 C 26.821 21.424 26.822 21.434 26.822 21.445 C 26.819 21.706 26.747 21.96 26.615 22.181 C 26.535 22.329 26.431 22.46 26.309 22.571 C 26.075 22.781 25.785 22.894 25.463 22.913 C 25.41 22.917 25.357 22.919 25.305 22.918 C 25.273 22.918 25.241 22.914 25.21 22.912 C 25.084 22.903 24.961 22.878 24.842 22.836 C 24.715 22.798 24.593 22.741 24.481 22.668 C 24.208 22.489 24.004 22.214 23.909 21.893 C 23.856 21.734 23.83 21.567 23.832 21.399 C 23.832 21.391 23.833 21.384 23.833 21.377 C 23.833 21.356 23.83 21.336 23.831 21.315 C 23.831 21.302 23.832 21.289 23.833 21.277 L 24.879 10.525 C 24.904 10.278 25.11 10.09 25.36 10.091 C 25.606 10.092 25.815 10.283 25.837 10.53 L 26.822 21.323 C 26.824 21.342 26.824 21.359 26.823 21.377 C 26.823 21.389 26.822 21.4 26.821 21.411 Z" transform="matrix(0, 1, -1, 0, 41.831852, -8.8226)"/>
+              </svg>
+              <span>3,3s</span>
+            </div>
+            <div class="bottom">
+              0-100 km/h*
+            </div>
+          </div>
+          <div class="item">
+            <div class="top">
+              614km
+            </div>
+            <div class="bottom">
+              Range (WLTP)
+            </div>
+          </div>
+          <div class="item">
+            <div class="top">
+              AWD
+            </div>
+            <div class="bottom">
+              Dual Motor
+            </div>
+          </div>
+          <div class="item" style="position: absolute; top: 23px; font-size: 12px;">
+            <a>ORDER NOW</a>
+          </div>
+        </div>
+        <div class="scroll-down">
+          <a href="#content-1">
+            <svg fill="white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="46px" height="46px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
+              <g id="Rounded_Rectangle_33_copy_4_1_">
+                <path d="M480,344.181L268.869,131.889c-15.756-15.859-41.3-15.859-57.054,0c-15.754,15.857-15.754,41.57,0,57.431l237.632,238.937   c8.395,8.451,19.562,12.254,30.553,11.698c10.993,0.556,22.159-3.247,30.555-11.698l237.631-238.937   c15.756-15.86,15.756-41.571,0-57.431s-41.299-15.859-57.051,0L480,344.181z"/>
+              </g>
+              </svg>
+          </a>
+        </div>
+      </footer>
+    </div>
+    <!-- p2 -->
+    <div id="content-1" class="content">
+      <div class="page-2-side">
+        
+        <div class="up">
+         </div> 
+        <div class="down">
+          <h2>Safety</h2>
+          <h1>Built for Safety</h1>
+          <p>Safety is the most important part of the overall Model 3 design. The metal structure is a combination of aluminum and steel, for maximum strength in every area. In a roof-crush test, Model 3 resisted four times its own mass, even with an all-glass roof: that's the same weight as two full-grown African elephants.</p>
+          <button class="circle">+</button>  Learn More
+        
+          <button class="btn" ><span> Order Now </span></button>
+      </div>
+      <div class="banner-image">
+        <div class="page2-img">
+          <img class="page2-img" src="./images/model_3_safety_hero.png" alt="model3_sagty_img">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <!-- p3 -->
+    <div id="content-2" class="content">
+      <div class="bunner-image-p3">
+
+      </div>
+      <div class="p3-down"></div>
+    </div>
+</body>
+</html>
